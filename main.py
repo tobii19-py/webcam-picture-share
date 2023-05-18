@@ -10,9 +10,11 @@ Builder.load_file('frontend.kv')
 class CameraScreen(Screen):
     def start(self):
         self.ids.camera.play = True
+        self.ids.camera_button.text = "Stop Camera"
 
     def stop(self):
-        pass
+        self.ids.camera.play = False
+        self.ids.camera_button.text = "Start Camera"
 
     def capture(self):
         pass
