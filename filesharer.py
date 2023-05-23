@@ -1,4 +1,5 @@
 import os
+from filestack import Client
 
 
 class FileSharer:
@@ -10,4 +11,5 @@ class FileSharer:
     def share(self):
         client = Client(self.api_key)
         new_filelink = client.upload(filepath=self.filepath)
-        print(new_filelink.url)
+        return new_filelink.url
+
