@@ -54,7 +54,7 @@ class ImageScreen(Screen):
             self.ids.link.text = self.link_message
 
     def open_link(self):
-        """Open link with default browser"""
+        """Open link with default"""
         try:
             webbrowser.open(self.url)
         except:
